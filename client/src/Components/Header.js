@@ -1,13 +1,17 @@
-import React, { Component } from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-export default class Header extends Component {
-    
-
-  render() {
-    return (
-      <div>
-        This is {this.props.value}
+export default function Header() {
+  return (
+    <div className="ui secondary pointing menu">
+      <Link to="/" className="item">
+        Streamer
+      </Link>
+      <div className="right menu">
+        <Link to="/" className="item">
+          All streams
+        </Link>
       </div>
-    )
-  }
+    </div>
+  );
 }
